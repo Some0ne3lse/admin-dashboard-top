@@ -6,6 +6,7 @@ body {
   --blue-background: rgb(6, 136, 201);
   --the-white-color: rgb(255, 255, 255);
   --the-grey-color: rgb(222, 229, 237);
+  font-family: "Roboto", sans-serif;
 }
 
 button {
