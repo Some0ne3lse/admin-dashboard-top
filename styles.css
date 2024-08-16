@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-columns: minmax(200px, 1fr) 4fr;
-  grid-template-rows: 8rem 4fr;
+  grid-template-rows: 10rem 4fr;
   --blue-background: rgb(6, 136, 201);
   --the-white-color: rgb(255, 255, 255);
   --the-grey-color: rgb(222, 229, 237);
@@ -66,6 +66,7 @@ header {
   display: grid;
   grid-template-columns: 4fr 2fr;
   grid-template-rows: 4rem 4rem;
+  padding: 1rem;
 }
 
 .search-bar {
@@ -134,6 +135,10 @@ header {
   margin: 0;
 }
 
+.profile-greeting h2 {
+  font-size: 1.2rem;
+}
+
 .action-buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -149,4 +154,86 @@ header {
   border: none;
   background-color: var(--blue-background);
   color: var(--the-white-color);
+}
+
+.content {
+  background-color: var(--the-grey-color);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 2rem 1fr 1fr;
+  padding: 1rem;
+}
+
+.content > h3 {
+  margin: 0;
+}
+
+.projects {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background-color: var(--the-white-color);
+  border-left: 5px rgb(242, 191, 98) solid;
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 1px 1px 20px gray;
+}
+
+.card-header {
+  margin: 0;
+}
+
+.card-content {
+  margin: 0;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+
+.card-buttons > button {
+  border: none;
+  background-color: var(--the-white-color);
+}
+
+.projects-header {
+  grid-row: 1 / 2;
+  grid-column: 1 /2;
+}
+
+.announcements-header {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.announcements-content {
+  background-color: var(--the-white-color);
+  padding: 1rem;
+  border-radius: 5px;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+
+.announcements-content h4 {
+  margin: 0;
+}
+.announcements-content p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.middle-announcement {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--the-grey-color);
+  border-bottom: 1px solid var(--the-grey-color);
 }
