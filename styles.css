@@ -2,9 +2,10 @@ img {
   width: 25px;
 }
 body {
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 200px 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-columns: minmax(200px, 1fr) 4fr;
+  grid-template-rows: 8rem 4fr;
   --blue-background: rgb(6, 136, 201);
   --the-white-color: rgb(255, 255, 255);
   --the-grey-color: rgb(222, 229, 237);
@@ -40,8 +41,7 @@ a {
   text-decoration: none;
 }
 
-.pages svg,
-.settings svg {
+svg {
   height: 1.2rem;
 }
 
@@ -64,8 +64,8 @@ header {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: 4rem 4rem;
 }
 
 .search-bar {
@@ -97,4 +97,56 @@ header {
   border: none;
   background-color: var(--the-grey-color);
   border-radius: 1rem;
+}
+
+.profile-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem 3rem 1.5rem 10%;
+}
+
+.profile-options a {
+  color: black;
+  flex-shrink: 0;
+}
+
+.profile-options img {
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.profile-name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 1.5rem;
+}
+
+.profile-name > img {
+  width: auto;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profile-greeting p,
+.profile-greeting h2 {
+  margin: 0;
+}
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center;
+  justify-content: space-around;
+  padding-left: 2rem;
+}
+
+.action-buttons button {
+  height: 1.8rem;
+  width: 5rem;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--blue-background);
+  color: var(--the-white-color);
 }
