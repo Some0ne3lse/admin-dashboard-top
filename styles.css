@@ -1,3 +1,12 @@
-a > img {
+img {
   height: 20px;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+button img {
+  height: 50px;
 }
