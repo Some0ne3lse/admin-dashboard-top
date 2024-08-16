@@ -7,6 +7,7 @@ body {
   grid-template-rows: 1fr 4fr;
   --blue-background: rgb(6, 136, 201);
   --the-white-color: rgb(255, 255, 255);
+  --the-grey-color: rgb(222, 229, 237);
 }
 
 li {
@@ -57,4 +58,43 @@ a {
 .pages li > a:hover,
 .settings li > a:hover {
   color: rgb(12, 12, 14);
+}
+
+header {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.search-bar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.search-form > button {
+  border: none;
+  background-color: var(--the-white-color);
+}
+
+.search-form > button > svg {
+  height: 1.2rem;
+}
+
+.search-form > input {
+  width: 100%;
+  border: none;
+  background-color: var(--the-grey-color);
+  border-radius: 1rem;
 }
